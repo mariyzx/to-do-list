@@ -3,6 +3,7 @@
 const input = document.getElementById('id-tarefa');
 const btnAdd = document.querySelector('.btnAdd');
 const lista = document.getElementById('task-list');
+const finalizados = document.getElementsByClassName('completed');
 
 const addTask = () => {
     const tarefaEscrita = input.value;
@@ -15,3 +16,20 @@ const addTask = () => {
 }
 
 btnAdd.addEventListener('click', addTask);
+
+// Ao clicar duas vezes em um item, o risca, marcando como completo;
+
+const completeTask = (event) => {
+    const evento = event.target;
+
+    evento.classList.toggle('completed');
+
+    if (evento.classList == 'completed') {
+        evento.style.textDecoration = 'line-through solid black';
+    } else {
+        evento.style.textDecoration = 'none';
+    }
+}
+
+lista.addEventListener('dblclick', completeTask);
+

@@ -8,14 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <title>Task list</title>
 </head>
-<body>
-
+<body class="d-flex flex-column min-vh-100">
     <section>
         <div class="container py-5 h-100">
             <!-- Utilizando a estilização de card dentro de um container para ter um card 'centralizado' na página-->
             <div class="card">
                 <div class="card-body p-5">
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center mb-4">
                         <header>
                             <h1 class="text-center">Task List</h1>
                             <h2>Click on an item to finish</h2>
@@ -23,20 +22,29 @@
                     </div>
                     
                     <div>
-                        <form>
+                        <form class="mb-4">
                             <div class="input-group">
                                 <input type="text" id="id-tarefa" class="form-control" placeholder="New task...">
-                                <button type="button" class="btn btn-primary">Add</button>
-                                <button type="button" class="btn btn-secondary">Clear</button>
-                                <button type="button" class="btn btn-success">Save</button>
+                                <div>
+                                    <button type="button" class="btn btn-primary">Add</button>
+                                    <button type="button" class="btn btn-secondary">Clear</button>
+                                    <button type="button" class="btn btn-success">Save</button>
+                                </div>
                             </div>
                         </form>
+
+                        <div>
+                            <ol class="task-list"></ol>
+                        </div>
                     </div>
                 </div> 
             </div>
-        </div>        
+        </div>      
     </section>
 
+<div class="card-footer text-muted text-center mt-auto">
+    Mariana Werneck - 2022
+</div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -4,10 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Task list</title>
 </head>
 <body>
+
+    <section>
+        <div class="container py-5 h-100">
+            <!-- Utilizando a estilização de card dentro de um container para ter um card 'centralizado' na página-->
+            <div class="card">
+                <div class="card-body p-5">
+                    <div class="d-flex justify-content-center">
+                        <header>
+                            <h1 class="text-center">Task List</h1>
+                            <h2>Click on an item to finish</h2>
+                        </header>
+                    </div>
+                    
+                    <div>
+                        <form>
+                            <div class="input-group">
+                                <input type="text" id="id-tarefa" class="form-control" placeholder="New task...">
+                                <button type="button" class="btn btn-primary">Add</button>
+                                <button type="button" class="btn btn-secondary">Clear</button>
+                                <button type="button" class="btn btn-success">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div> 
+            </div>
+        </div>        
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>

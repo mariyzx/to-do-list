@@ -1,0 +1,19 @@
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.btnAdd {
+    margin-left: 4px;
+}
+
+.card {
+    height: 480px;
+}
+
+li {
+    font-size: 18px;
+    line-height: 30px;
+    
+}

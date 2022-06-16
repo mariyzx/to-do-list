@@ -9,10 +9,10 @@
     <title>Task list</title>
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <section>
+    <section style="background-color: #e2d5de">
         <div class="container py-5 h-100">
             <!-- Utilizando a estilização de card dentro de um container para ter um card 'centralizado' na página-->
-            <div class="card">
+            <div class="card" style="border-radius: 15px;">
                 <div class="card-body p-5">
                     <div class="d-flex justify-content-center mb-4">
                         <header>
@@ -27,8 +27,9 @@
                                 <input type="text" id="id-tarefa" class="form-control" placeholder="New task...">
                                 <div>
                                     <button type="button" class="btn btn-primary btnAdd">Add</button>
+                                    <button type="button" class="btn btn-warning btnRemove">Clear Completed</button>
                                     <button type="button" class="btn btn-secondary btnClear">Clear</button>
-                                    <button type="button" class="btn btn-success">Save</button>
+                                    <button type="button" class="btn btn-success btnSave">Save</button>
                                 </div>
                             </div>
                         </form>
@@ -43,7 +44,7 @@
     </section>
 
 <div class="card-footer text-muted text-center mt-auto">
-    Mariana Werneck - 2022
+    <p>Mariana Werneck - 2022</p>
 </div>
     <script src="script.js"></script>
 </body>

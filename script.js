@@ -5,6 +5,8 @@ const btnAdd = document.querySelector('.btnAdd');
 const lista = document.getElementById('task-list');
 const finalizados = document.getElementsByClassName('completed');
 const btnClear = document.querySelector('.btnClear');
+const btnSave = document.querySelector('.btnSave');
+const btnRemove = document.querySelector('.btnRemove');
 
 const addTask = () => {
     const tarefaEscrita = input.value;
@@ -41,3 +43,32 @@ const clear = () => {
 }
 
 btnClear.addEventListener('click', clear);
+
+// Ao clicar em 'Save' salva o estado da lista no localStorage;
+
+const save = () => {
+    localStorage.setItem('lista', JSON.stringify(lista.innerHTML));
+}
+
+btnSave.addEventListener('click', save);
+
+const getSaved = () => {
+    const salvos = JSON.parse(localStorage.getItem('lista'));
+    lista.innerHTML = salvos;
+}
+
+// Ao clicar no botão 'Clear completed' remove apenas as tarefas marcadas como finalizadas;
+
+const removeCompleted = () => {
+    const tarefasCompletas = document.querySelectorAll('.completed');
+
+    for (let i = 0; i < tarefasCompletas.length; i += 1) {
+        tarefasCompletas[i].remove();
+    }
+}
+
+btnRemove.addEventListener('click', removeCompleted);
+
+window.onload = () => {
+    getSaved();
+}

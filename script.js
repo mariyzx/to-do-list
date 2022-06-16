@@ -4,6 +4,7 @@ const input = document.getElementById('id-tarefa');
 const btnAdd = document.querySelector('.btnAdd');
 const lista = document.getElementById('task-list');
 const finalizados = document.getElementsByClassName('completed');
+const btnClear = document.querySelector('.btnClear');
 
 const addTask = () => {
     const tarefaEscrita = input.value;
@@ -33,3 +34,10 @@ const completeTask = (event) => {
 
 lista.addEventListener('dblclick', completeTask);
 
+// Ao clicar no botão 'Clear' apaga todo o conteúdo da lista;
+
+const clear = () => {
+    lista.innerHTML = '';
+}
+
+btnClear.addEventListener('click', clear);

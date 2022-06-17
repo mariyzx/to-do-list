@@ -7,6 +7,7 @@ const finalizados = document.getElementsByClassName('completed');
 const btnClear = document.querySelector('.btnClear');
 const btnSave = document.querySelector('.btnSave');
 const btnRemove = document.querySelector('.btnRemove');
+const item = document.getElementsByTagName('li');
 
 const addTask = () => {
     const tarefaEscrita = input.value;

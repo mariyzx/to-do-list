@@ -9,11 +9,18 @@ body {
 }
 
 .card {
-    height: 480px;
+    height: 601px;    
 }
 
 li {
     font-size: 18px;
     line-height: 30px;
-    
+}
+
+.card-footer {
+    margin-top: 30px;
+}
+
+.name {
+    margin-top:5px;
 }
